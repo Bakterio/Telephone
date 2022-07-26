@@ -7,6 +7,7 @@ int greenP = 4;
 int count = 0;
 int lastTime = millis();
 int lastStatus = LOW;
+String number = "";
 
 void setup() {
   Serial.begin(9600);
@@ -28,6 +29,7 @@ void loop() {
       if (debug) Serial.println(deltaTime);
       if (deltaTime == 0) return;
       count++;
+      Serial.println("bing - " + String(count));
       lastTime = millis();
       if (debug) {
         Serial.println("count - " + String(count));
@@ -43,6 +45,8 @@ void loop() {
     } else {
       Serial.print(String(count) + ",");
     }
+    number += String(count);
+    Serial.println("Number: " + number);
     count = 0;
  }
 }
