@@ -29,7 +29,7 @@ void loop() {
       if (debug) Serial.println(deltaTime);
       if (deltaTime == 0) return;
       count++;
-      Serial.println("bing - " + String(count));
+      Serial.println("impulse - " + String(count));
       lastTime = millis();
       if (debug) {
         Serial.println("count - " + String(count));
@@ -43,7 +43,7 @@ void loop() {
       Serial.print("\n\n\n\n\n");
       delay(1000);
     } else {
-      Serial.print(String(count) + ",");
+      Serial.print(String(count) + ", ");
     }
     number += String(count);
     Serial.println("Number: " + number);
