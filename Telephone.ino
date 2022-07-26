@@ -1,4 +1,4 @@
-const bool debug = true;
+const bool debug = false;
 
 int yellowP = 2;
 int whiteP = 3;
@@ -24,7 +24,7 @@ void loop() {
     if (yellow == HIGH) {
       int deltaTime = lastTime - millis();
       Serial.println(deltaTime);
-      //if (deltaTime >= -30) return;
+      if (deltaTime == 0) return;
       count++;
       lastTime = millis();
       if (debug) {
